@@ -40,11 +40,15 @@ class UserDataFragment: Fragment() {
                 CustomDialog.Builder(it)
                     .title(R.string.updated)
                     .image(R.drawable.ic_happy)
-                    .primaryButton(R.string.ok)
+                    .primaryButton(R.string.ok){
+                        (activity as? MainActivity)?.updateUserIcon()
+                    }
+                    .secondaryButton("")
                     .build()
                     .show()
             }
         }else{
+            if(!StringUtils.isValidEmail(userMail)) binding?.errorMessage?.text = getString(R.string.mail_format_error)
             binding?.errorMessage?.visibility =  View.VISIBLE
         }
     }

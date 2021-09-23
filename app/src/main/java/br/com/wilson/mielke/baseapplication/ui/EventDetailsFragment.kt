@@ -63,7 +63,6 @@ class EventDetailsFragment: Fragment(), OnMapReadyCallback{
                 eventDate.text = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).format(Date(it.date))
                 eventDescription.text = it.description
                 if(baseViewModel.isEventChecked(it.id.toInt())){
-                    binding?.registerButton?.setBackgroundColor(resources.getColor(R.color.green))
                     binding?.registerButton?.isEnabled = false
                 }
                 context?.let{context ->
@@ -112,7 +111,6 @@ class EventDetailsFragment: Fragment(), OnMapReadyCallback{
                                         .message(R.string.registered_dialog_message)
                                         .image(R.drawable.ic_happy)
                                         .primaryButton(R.string.ok){
-                                            binding?.registerButton?.setBackgroundColor(resources.getColor(R.color.green))
                                             binding?.registerButton?.isEnabled = false
                                         }
                                         .build()

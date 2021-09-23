@@ -126,6 +126,7 @@
         android:layout_height="56dp"
         android:background="@color/transparent"
         android:textColor="@color/red"
+        android:visibility="gone"
         tools:text="test"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/btnPrimary"

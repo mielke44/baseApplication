@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         startLoader()
     }
 
+    fun updateUserIcon(){
+        if(baseViewModel.isUserUpdated()) binding.toolbarUserButton.setImageResource(R.drawable.ic_confirm)
+    }
+
     private fun setupListeners(){
         binding.apply{
             toolbarButton.setImageResource(R.drawable.ic_close)

@@ -14,6 +14,7 @@
     <string name="ok">OK</string>
 
     <string name="error_input">Algum dos campos não foi preenchido!</string>
+    <string name="mail_format_error">O email inserido não é válido!</string>
     <string name="error_network_title">Oops :P</string>
     <string name="error_network_message">Ocorreu um erro de serviço! <br/>Tente novamente mais tarde :)</string>
     <string name="try_again">Tentar novamente</string>

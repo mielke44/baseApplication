@@ -121,7 +121,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/round_btn_background"
+        android:background="@drawable/round_btn_background_selector"
         android:layout_marginBottom="10dp"
         tools:ignore="ContentDescription" />
 

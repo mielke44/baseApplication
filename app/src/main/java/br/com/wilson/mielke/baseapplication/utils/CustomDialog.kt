@@ -128,7 +128,7 @@ class CustomDialog(context: Context) : AppCompatDialog(context) {
 
         fun primaryButton(textButton: String, textColor: Int? = null, listener: ((Boolean) -> Unit)? = null): Builder {
             customDialog.binding.btnPrimary.apply {
-                setText(textButton)
+                text = textButton
                 textColor?.let {
                     customDialog.binding.btnPrimary.setTextColor(it)
                 }
@@ -143,7 +143,7 @@ class CustomDialog(context: Context) : AppCompatDialog(context) {
 
         fun secondaryButton(textButton: String, textColor: Int? = null, listener: ((Boolean) -> Unit)? = null): Builder {
             customDialog.binding.btnSecondary.apply {
-                setText(textButton)
+                text = textButton
                 textColor?.let { customDialog.binding.btnSecondary.setTextColor(it) }
                 visibility = getVisibility(textButton)
                 setOnClickListener {
