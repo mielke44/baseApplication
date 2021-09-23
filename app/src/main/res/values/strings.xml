@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Challenge Application</string>
+    <string name="event_list_title">Lista de Eventos</string>
+    <string name="event_price">Preço: R$%s</string>
+
+    <string name="user_title">Dados de usuário:</string>
+    <string name="user_name">nome</string>
+    <string name="mail">e-mail</string>
+    <string name="update">atualizar</string>
+    <string name="updated">Dados atualizados!</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="not_now">Agora não</string>
+    <string name="ok">OK</string>
+
+    <string name="error_input">Algum dos campos não foi preenchido!</string>
+    <string name="error_network_title">Oops :P</string>
+    <string name="error_network_message">Ocorreu um erro de serviço! <br/>Tente novamente mais tarde :)</string>
+    <string name="try_again">Tentar novamente</string>
+    <string name="close">Fechar</string>
+
+    <string name="user_update_dialog_message">Você deseja atualizar seus dados?</string>
+    <string name="user_update_dialog_title">Dados do usuário</string>
+    <string name="finish_app_dialog_message">Tem certeza que deseja finalizar o app?</string>
+    <string name="finish_app_dialog_title">"Ja vai?"</string>
+
+    <string name="user_not_updated_dialog_title">Oops, não te conheço!</string>
+    <string name="user_not_updated_dialog_message">Deseja atualizar seus dados para poder dar checkin no evento?</string>
+    <string name="registered_dialog_title">Opa!</string>
+    <string name="registered_dialog_message">Você fez seu check in com sucesso!</string>
+</resources>

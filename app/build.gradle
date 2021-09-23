@@ -1,0 +1,122 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'kotlin-parcelize'
+}
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "br.com.wilson.mielke.baseapplication"
+        minSdk 19
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    def kotlinVersion = '1.3.72'
+    def retrofitVersion = '2.9.0'
+    def okhttp3Version = '4.8.0'
+    def okhttpDigestVersion = '2.1'
+    def persistentCookieJarVersion = 'v1.0.1'
+    def glideVersion = '4.9.0'
+    def materialVersion = '1.1.0'
+    def constraintLayoutVersion = '2.0.0-alpha3'
+    def testRunnerVersion = '1.2.0'
+    def appCompatVersion = '1.1.0'
+    def junitVersion = "4.13-beta-2"
+    def recyclerViewAnimatorsVersion = '3.0.0'
+    def recyclerViewVersion = '1.1.0-alpha02'
+    def androidAnnotationVersion = '1.1.0'
+    def androidPlayVersion = '1.8.2'
+    def gsonVersion = '2.8.5'
+    def lifecycleVersion = '2.2.0'
+    def koinVersion = '2.2.0-alpha-1'
+    def coroutinesVersion = "1.3.9"
+    def androidXCoreVersion = "1.3.2"
+    def androidXSecurityVersion = "1.0.0"
+    def truthVersion = "1.1.2"
+    def mockkVersion = "1.11.0"
+    def preferenceVersion = "1.1.1"
+    def multidexVersion = "2.0.1"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    implementation "androidx.core:core-ktx:$androidXCoreVersion"
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    implementation "androidx.multidex:multidex:$multidexVersion"
+
+    implementation "com.squareup.okhttp3:okhttp:$okhttp3Version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3Version"
+
+    implementation "com.burgstaller:okhttp-digest:$okhttpDigestVersion"
+
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation "com.github.bumptech.glide:okhttp3-integration:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    implementation "jp.wasabeef:recyclerview-animators:$recyclerViewAnimatorsVersion"
+
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+
+    implementation "androidx.annotation:annotation:$androidAnnotationVersion"
+
+    implementation "com.google.android.play:core:$androidPlayVersion"
+
+    implementation "org.koin:koin-android:$koinVersion"
+    implementation "org.koin:koin-android-viewmodel:$koinVersion"
+    implementation "org.koin:koin-androidx-viewmodel:$koinVersion"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+
+    testImplementation "com.google.truth:truth:$truthVersion"
+    testImplementation "junit:junit:$junitVersion"
+
+}

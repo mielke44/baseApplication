@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentCheckBoxDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="50dp"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_background">
+
+    <LinearLayout
+        android:id="@+id/layoutImages"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_warning"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvTitleDialogLegacy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitleDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/layoutImages"
+        app:layout_goneMarginTop="16dp"
+        tools:text="Sample Title"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvMessageDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center_horizontal"
+        android:textColor="#75ffffff"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/rlCheckBox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleDialog"
+        app:layout_goneMarginTop="24dp"
+        tools:text="Sample Message, oh no ):"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rlCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessageDialog">
+
+        <TextView
+            android:id="@+id/textViewCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/checkboxDialog"
+            android:paddingStart="18dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="Neque porro quisquam est qui dolorem ipsum quiarit dolor"
+            android:textSize="14sp">
+
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/checkboxDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewCheckBox"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+
+        </CheckBox>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="36dp"
+        android:alpha=".15"
+        android:background="@color/button"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/btnPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rlCheckBox"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnSecondary"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/transparent"
+        android:textColor="@color/red"
+        tools:text="test"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"/>
+
+    <Button
+        android:id="@+id/btnPrimary"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/transparent"
+        tools:text="test"
+        android:textSize="16sp"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/divider"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

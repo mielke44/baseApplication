@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/canvas">
+
+    <TextView
+        android:id="@+id/userTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/user_title"
+        android:textColor="@color/white"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:text="@string/error_input"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/userTitle"/>
+
+    <TextView
+        android:id="@+id/userNameTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/user_name"
+        android:textColor="@color/white"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/userTitle"/>
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/userNameTip"
+        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/userMailTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/mail"
+        android:textColor="@color/white"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/nameInput"/>
+
+    <EditText
+        android:id="@+id/mailInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/userMailTip"
+        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="textEmailAddress"/>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_background"
+        android:layout_marginTop="32dp"
+        android:text="@string/update"
+        android:textColor="@color/canvas"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mailInput"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
